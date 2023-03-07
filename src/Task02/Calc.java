@@ -16,14 +16,14 @@ public class Calc {
     /**
      * Calculation results
      */
-    private Area result;
+    private Area area;
 
     /**
      * Default constructor
      */
     public Calc() {
 
-        result = new Area();
+        area = new Area();
     }
 
 
@@ -57,56 +57,54 @@ public class Calc {
      */
     public double init(String binarySide) {
 
-        result.setBinarySide(binarySide);
-        return result.setResult(calc(binarySide));
+        area.setBinarySide(binarySide);
+        return area.setResult(calc(binarySide));
     }
 
 
     /**
-     * Show the result
+     * Show the area
      */
     public void show() {
 
-        System.out.println(result);
+        System.out.println(area);
     }
 
 
     /**
-     * Gets the result
+     * Gets the area
      *
-     * @return the result
+     * @return the area
      */
-    public Area getResult() {
+    public Area getArea() {
 
-        return result;
+        return area;
     }
 
 
     /**
-     * Serialize result
+     * Serialize area
      *
-     * @param IOException the  IO exception
      * @throws IOException
      */
     public void save() throws IOException {
 
         ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(FNAME));
-        os.writeObject(result);
+        os.writeObject(area);
         os.flush();
         os.close();
     }
 
 
     /**
-     * Deserialize result
+     * Deserialize area
      *
-     * @param Exception the exception
      * @throws Exception
      */
     public void restore() throws Exception {
 
         ObjectInputStream is = new ObjectInputStream(new FileInputStream(FNAME));
-        result = (Area) is.readObject();
+        area = (Area) is.readObject();
         is.close();
     }
 }
