@@ -4,15 +4,31 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
+/**
+ * The class Main
+ */
 public class Main {
     private Calc calc = new Calc();
 
+
+    /**
+     * Main
+     *
+     * @param args the args
+     */
     public static void main(String[] args) {
+
         Main main = new Main();
         main.menu();
     }
 
+
+    /**
+     * Menu to display the options
+     */
     private void menu() {
+
         String s = null;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         do {
