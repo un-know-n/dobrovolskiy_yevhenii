@@ -5,11 +5,25 @@ import Task03.View;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * The class Main extends task03. main
+ */
 public class Main extends Task03.Main {
+
+    /**
+     * Main
+     *
+     * @param view the view
+     */
     public Main(View view) {
         super(view);
     }
 
+    /**
+     * Main
+     *
+     * @param args the args
+     */
     public static void main(String[] args) {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         Main main;
