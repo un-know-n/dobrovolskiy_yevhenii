@@ -23,9 +23,7 @@ public class ViewTable extends ViewResult {
 
 
     /**
-     * View table
-     *
-     * @return public
+     * Default constructor
      */
     public ViewTable() {
 
@@ -34,13 +32,23 @@ public class ViewTable extends ViewResult {
 
 
     /**
-     * View table
+     * Constructor with parameter
      *
-     * @param width the width
-     * @return public
+     * @param width the width of the table
      */
     public ViewTable(int width) {
 
+        this.width = width;
+    }
+
+    /**
+     * Constructor with parameters
+     *
+     * @param width the width of the table
+     * @param n     amount of items
+     */
+    public ViewTable(int width, int n) {
+        super(n);
         this.width = width;
     }
 
