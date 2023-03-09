@@ -78,6 +78,7 @@ public class ViewResult implements View {
 
         int iterative = 0;
         for (Area item : items) {
+            item.setBinarySide(Integer.toBinaryString(iterative));
             item.setResult(calc(Integer.toBinaryString(iterative)));
             iterative += factor;
         }

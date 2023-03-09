@@ -30,7 +30,7 @@ public class Main {
     /**
      * Menu to display the options
      */
-    private void menu() {
+    protected void menu() {
 
         String s = null;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
