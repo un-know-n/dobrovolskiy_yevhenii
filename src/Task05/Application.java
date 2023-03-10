@@ -8,13 +8,27 @@ public class Application {
     private View view = new ViewTable();
     private Menu menu = new Menu();
 
+
+    /**
+     * Default constructor
+     */
     private Application() {
+
     }
 
+
+    /**
+     * Take app instance
+     */
     public static Application getInstance() {
+
         return instance;
     }
 
+
+    /**
+     * Run the app
+     */
     public void run() {
         menu.add(new ViewConsoleCommand(view));
         menu.add(new GenerateConsoleCommand(view));

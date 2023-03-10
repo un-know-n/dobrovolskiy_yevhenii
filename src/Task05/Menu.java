@@ -9,13 +9,25 @@ import java.util.List;
 public class Menu implements Command {
     private List<ConsoleCommand> menu = new ArrayList<ConsoleCommand>();
 
+
+    /**
+     * Add command to menu
+     *
+     * @param command the command
+     * @return ConsoleCommand
+     */
     public ConsoleCommand add(ConsoleCommand command) {
         menu.add(command);
         return command;
     }
 
     @Override
+
+    /**
+     * Execute available command
+     */
     public void execute() {
+
         String s = null;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         menu:
@@ -48,7 +60,14 @@ public class Menu implements Command {
     }
 
     @Override
+
+    /**
+     * Output all available commands
+     *
+     * @return String
+     */
     public String toString() {
+
         String s = "Enter command...\n";
         for (ConsoleCommand c : menu) {
             s += c + ", ";
