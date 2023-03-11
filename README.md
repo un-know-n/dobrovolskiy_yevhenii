@@ -30,3 +30,9 @@
 
 **Робота програми:**
 ![alt text](images/Task05.png)
+
+## Завдання 6:
+Додано інтерфейс Queue та його клас-реалізацію CommandQueue, який управляє чергою завдань за допомогою Worker Thread. За допомогою класів ExecuteConsoleCommand, MaxCommand, MinMaxCommand, AvgCommand продемонстрована можливість паралельної обробки елементів колекції
+
+**Робота програми:**
+![alt text](images/Task05.png)
